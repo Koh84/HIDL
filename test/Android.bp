@@ -1,0 +1,15 @@
+cc_binary {
+    name: "mysimptest",
+    defaults: ["hidl_defaults"],
+    proprietary: true,
+    srcs: ["servtest.cpp"],
+
+    shared_libs: [
+        "android.hardware.simple@2.0",
+        "android.hardware.simple@2.0-impl",
+        "libhidlbase",
+        "libhidltransport",
+        "liblog",
+        "libutils",
+    ],
+}
